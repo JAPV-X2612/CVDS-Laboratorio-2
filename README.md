@@ -169,20 +169,50 @@ We're going to change the `App.java` class so that it gets a name as a parameter
       ```bash
       echo. > src\main\java\edu\eci\cvds\patterns\shapes\Shape.java
       ```
-  - Step 2: Create the Shape.java interface
+  - Step 2: Create the basics of the app
+
+    Create the Shape.java interface
     ![description](assets/class_shapes1.png)
+    
+    Then create the RegularTypeShape.java
 
+    ![description](assets/class_shapeType.png)
 
+    Now we create the directory concrete in `src/main/java/edu/eci/cvds/patterns/concrete` and within it we will create the classes: Triangle.java, Quadrilateral.java, Pentagon.java and Hexagon.java in a similar way of triangle
+    
+    ![description](assets/class_Triangle.png)
 
+    And finally create the ShapeMain.java
+    ![description](assets/class_ShapeMain.png)
+
+  - Step 3: Decide and create the type of factory that the app will use
+
+    There are 3 types of factory that we can use Simple factory, factory method and abstract factory. We decided to use the simple factory because the others are more focused on applications with many elements which need an order to be created and these factories offer this through how they are built.
+    Otherwise, the simple one only has one factory, which is ideal due to the small amount of elements that we have and not overcomplicating the exercise.
+
+    Now that we have decided wich one we will use, we will create it in the shapeFactory.java
+
+    ![description](assets/class_shapeFactory.png)
+
+    Finally we will test it with the following parameters:
+
+    without parameters
+
+    ![description](assets/test_without_parameters.png)
+
+    qwerty
+
+    ![description](assets/test_qwerty.png)
+
+    pentagon
+
+    ![description](assets/test_pentagon.png)
+
+    Hexagon
+
+    ![description](assets/test_Hexagon.png)
 ---
 
+## Conclusions
 
-```bash
-# Example for Java
-java -version
-
-
-
-mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Hexagon"
-
-```
+Thanks to maven and that it automates many aspects of project management, including dependency resolution, compilation, testing, and packaging, making the development process more efficient. Not only that but it also manage the insatallation and usage of multiple librares to use in the project making it really useful and helpful.
