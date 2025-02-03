@@ -14,6 +14,7 @@ Patterns/
 
 # === Archivos de logs ===
 *.log
+*.tmp
 
 # === Configuración y credenciales ===
 *.env
